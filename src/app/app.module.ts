@@ -12,8 +12,8 @@ import { HighlightDirective } from './highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    EvenNumberPipe,
-    HighlightDirective     //custom pipe
+    EvenNumberPipe,        // Custom Pipe
+    HighlightDirective     // Custom Directive
   ],
   imports: [
     BrowserModule,
