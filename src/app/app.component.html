@@ -1,0 +1,22 @@
+<h2>Illustration of custom pipe</h2>
+<h3>Add Number to Composite nums : </h3>
+<input type="text" name="nums" id="nums" #nums>
+<button type="submit" (click)="onSubmit(nums.value)">Add Number</button>
+
+<h3>Composite Numbers</h3>
+<div *ngFor="let num of compositeNums">
+  {{num}}
+</div>
+
+<h3>Even nums | piped </h3>
+<div *ngFor="let num of compositeNums | evenNumber">
+  {{num}}
+</div>
+<!-- Custom directive  -->
+<h4>Pick a highlight color</h4>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [appHighlight]="color">Highlight me!</p>
